@@ -28,22 +28,61 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;  data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <title>Hello World</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <title>Calculator</title>
     </head>
     <body>
         <div class="app">
-            <h1>Seths first cordova app Woot</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">5.4.3.2.1</p>
-                <p class="event received">Self Destructing in ...</p>
+            <div id="deviceready">
+                <!-- <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p> -->
+                <div class="container">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-6">
+                      <h1>Seths first Cordova Calculator</h1>
+                      <div class="col-md-12">
+                           <p id="input"></p>
+                           <p id="output"></p>
+                      </div>
+                       <table class="table">
+                         <tr>
+                           <td><button class="btn btn-block btn-primary" id="7">7</button></td>
+                           <td><button class="btn btn-block btn-primary" id="8">8</button></td>
+                           <td><button class="btn btn-block btn-primary" id="9">9</button></td>
+                           <td><button class="btn btn-block btn-danger" id="plus">+</button></td>
+                         </tr>
+                         <tr>
+                           <td><button class="btn btn-block btn-primary" id="4">4</button></td>
+                           <td><button class="btn btn-block btn-primary" id="5">5</button></td>
+                           <td><button class="btn btn-block btn-primary" id="6">6</button></td>
+                           <td><button class="btn btn-block btn-danger" id="minus">-</button></td>
+                         </tr>
+                         <tr>
+                           <td><button class="btn btn-block btn-primary" id="1">1</button></td>
+                           <td><button class="btn btn-block btn-primary" id="2">2</button></td>
+                           <td><button class="btn btn-block btn-primary" id="3">3</button></td>
+                           <td><button class="btn btn-block btn-danger" id="multiply">*</button></td>
+                         </tr>
+                         <tr>
+                           <td><button class="btn btn-block btn-danger" id="C">C</button></td>
+                           <td><button class="btn btn-block btn-primary" id="0">0</button></td>
+                           <td><button class="btn btn-block btn-danger" id="equals">=</button></td>
+                           <td><button class="btn btn-block btn-danger" id="divide">/</button></td>
+                         </tr>
+                       </table>
+                    <div class="col-md-2"></div>
+             
+                </div>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>
